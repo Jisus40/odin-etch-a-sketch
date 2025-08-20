@@ -23,8 +23,11 @@ function selection() {
 const selectioner = document.querySelector(".selectioner");
 selectioner.addEventListener("click", () => selection());
 
-container.addEventListener("mousemove", (event) => {
+container.addEventListener("mouseover", (event) => {
+    let color1 = Math.floor(Math.random() * 255);
+    let color2 = Math.floor(Math.random() * 255);
+    let color3 = Math.floor(Math.random() * 255);
     if (event.target.classList.contains("item")) {
-        event.target.style.backgroundColor = "green";
+        event.target.style.backgroundColor = `rgb(${color1}, ${color2}, ${color3})`;
     }
 });
